@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*From VamerHazard CompanyRatings.css in Vonnect-main*/
+.ratings {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #e2be22;
+}
+
+.ratings__star {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+  background-color: #ddd;
+  clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+}
+
+.ratings__star--full {
+  background-color: #e2be22;
+}
+
+.ratings__star--half::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #e2be22;
+  clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 50% 50%);
+}
+/*From VamerHazard CompanyRatings.css in Vonnect-main*/
+
+.navbar{
+  background: rgb(37,37,37);
+  background: linear-gradient(90deg, rgba(37,37,37,1) 0%, rgba(17,16,16,1) 21%, rgba(0,0,0,1) 100%);
+}
+
+.navbar_text{
+  @apply hover:text-white hover:border-white drop-shadow-sm text-gray-300 p-2 rounded-md
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom right,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
