@@ -1,6 +1,10 @@
 import React from 'react'
 
-const Stars = (props: object) => {
+interface Props{
+  value: number
+}
+
+const Stars = (props: Props) => {
   const fullStars = Math.floor(props.value);
   const hasHalfStar = props.value % 1 !== 0;
 

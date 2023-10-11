@@ -22,6 +22,9 @@ const Navbar = () => {
         <Link className="navbar_text"href="/">
           <p>Home</p>
         </Link>
+        <Link className="navbar_text" href="/">
+          <p>Sign In</p>
+        </Link>
       </div>
     </div>
   )
