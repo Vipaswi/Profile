@@ -23,24 +23,6 @@
   background-color: #e2be22;
 }
 
-.typewriter{
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 5px solid;
-  animation:
-    typing 2s,
-    cursor.5s step-end infinite alternate;
-}
-
-@keyframes cursor {
-  50% {border-color: transparent;}
-}
-
-@keyframes typing {
-  from {width: 0}
-}
-
 .ratings__star--half::before {
   content: "";
   position: absolute;
@@ -49,7 +31,7 @@
   width: 50%;
   height: 100%;
   background-color: #e2be22;
-  clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 50% 50%);
+  clip-path: polygon(50% 0%, 50% 100%, 100% 100%, 100% 0%);
 }
 /*From VamerHazard CompanyRatings.css in Vonnect-main*/
 
