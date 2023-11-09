@@ -1,7 +1,7 @@
 const Proficiency = [
   {
     Language: "Python",
-    Proficiency: 2,
+    Proficiency: 4,
   },
   {
     Language: "Javascript",
@@ -17,11 +17,11 @@ const Proficiency = [
   },
   {
     Language: "Golang",
-    Proficiency: 1,
+    Proficiency: 2,
   },
   {
     Language: "C++",
-    Proficiency: 2,
+    Proficiency: 3,
   },
   {
     Language: "Arduino",
