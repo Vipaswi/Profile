@@ -35,21 +35,20 @@
 }
 /*From VamerHazard CompanyRatings.css in Vonnect-main*/
 
-.navbar{
-  background: rgb(37,37,37);
-  background: linear-gradient(90deg, rgba(37,37,37,1) 0%, rgba(17,16,16,1) 21%, rgba(0,0,0,1) 100%);
-}
-
 .navbar_text{
-  @apply hover:text-white hover:border-white drop-shadow-sm text-gray-300 p-2 rounded-md
+  @apply hover:text-white hover:drop-shadow-sm text-black p-2 md:text-xl 
+  hover:transition duration-[300ms] bg-white hover:border hover:border-black 
+  focus:outline-none hover:bg-black focus:ring-4 focus:ring-gray-400 font-medium rounded-sm 
+  px-5 py-2.5 mr-2 text-center
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom right,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.triangular-self {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+  transform: scaleX(-1);
+  bottom: 0;
+  left: 0; /* Ensure it starts from the left edge */
 }

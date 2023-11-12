@@ -1,51 +1,53 @@
+'use client'
 import React, {useState} from 'react'
 import Vipaswi from 'public/assets/Vipaswi.jpg'
-import Image from 'next/image'
-import Stars from './Stars'
+import Image, { StaticImageData } from 'next/image'
+import background from 'public/assets/background.jpg'
+import Stars from './sub_components/Stars'
 import Proficiency from '@/public/Files/Proficiency'
 import Link from 'next/link'
+import Click from './sub_components/Click'
+
+interface ProficiencyObject {
+  Language: StaticImageData;
+  Proficiency: number;
+}
 
 const Introduction = () => {
   return (
-    <div>
-      <div className='flex flex-col md:flex-row mb-2 border border-gray-300 md:justify-evenly justify-center items-center bg-gradient-to-r from-slate-200 to-white border-s drop-shadow-md rounded-md'>
-        <div className='s:m-5 md:m-10 p-10'>
-          <Image src={Vipaswi} width={750} height={750} alt="Vipaswi" className='rounded-xl'/>
-        </div>
-        <div className="pb-5 pr-5 pl-5 mb-10 items-center">
-          <h2 className='duration-500 2xl:text-8xl text-6xl bold bg-gradient-to-r from-blue-500 from-10% via-purple-700 via-20% to-red-800 to:90% bg-clip-text text-transparent bold font-serif text-center md:text-start items-center '>
-            Welcome!
-          </h2>
-          <p className='p-2 mt-5 text-center md:text-start text-xl'>My name is Vipaswi Thapa. I am a Computer Engineer at the {' '}
-            <span className='bg-gradient-to-r from-orange-800 to-yellow-700 bg-clip-text text-transparent '>
-              Rochester Institute of Technology!
-            </span>
-          </p>
-          <p className='p-2 text-center md:text-start text-xl'>
-          I was born and raised in {' '}
-            <span className='bg-gradient-to-r from-red-800 to to-blue-800 bg-clip-text text-transparent'>
-              Nepal. {' '}
-            </span>
-          Here are a few languages I have learned: 
-          </p>
-          <div className='p-2'>
-            <div className='grid w-full xl:grid-cols-3 md:grid-cols-2 grid-cols-1 place-content-center'>
-              {Proficiency.map(object => (
-                <div className='flex m-1 justify-center md:justify-evenly items-center'>
-                  <p className='text-center mr-2 md:mr-0'>
-                    {object.Language}
-                  </p>
-                  <Stars value={object.Proficiency}/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-                </div>
-                ))}
-            </div>
-          </div>
-          <div className='flex justify-center md:justify-start pt-5'>
-            <Link href='' className='hover:transition duration-[400ms] text-black hover:text-white bg-white border border-gray-300 focus:outline-none hover:bg-black focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2"'>
-              <button type='button'>About Me!</button>
-            </Link>
+    <div className="z-10 min-h-screen relative flex flex-col xl:flex-row md:justify-evenly justify-center items-center w-full rounded-md bg-[url('https://media.istockphoto.com/id/511661914/photo/white-marble-patterned-texture-background.jpg?s=612x612&w=0&k=20&c=o9RRB_jhshUtxn-LIO2TNQz4QycdeOh-qe1qMK4CZW4=')]">
+      <div className="absolute opacity-80 inset-0 z-0">
+        <Image src='https://www.toppal.com/media/images/products/cache/e201_l-2000x2000.jpg' layout='fill' objectFit='cover' alt="background"/> 
+      </div>
+      <div className='z-10 s:m-5 xl:m-10 p-10'>
+        <Image src={Vipaswi} width={850} height={850} alt="Vipaswi" className='rounded-xl'/>
+      </div>
+      <div className="z-10 pb-5 pr-5 pl-5 mb-10 items-center">
+        <h2 className='duration-500 text-6xl lg:text-8xl bold bg-gradient-to-r from-blue-500 via-purple-500 to-red-800 bg-clip-text text-transparent bold font-serif text-center xl:text-start items-center lg:mb-10' >Welcome!</h2>
+        <p className='p-2 lg:mt-5 lg:text-xl md:text-md text-center md:text-start'>
+          My name is Vipaswi Thapa. I am a Computer Engineer at the {' '}
+          <span className='bg-gradient-to-r from-orange-800 to-yellow-700 bg-clip-text text-transparent '>Rochester Institute of Technology!</span>
+        </p>
+        <p className="p-2 lg:mt-4 lg:text-xl md:text-md text-center md:text-start">I was born and raised in {' '}
+          <span className='bg-gradient-to-t from-red-800 to-blue-800 text-transparent bg-clip-text'> Nepal. {' '} </span>
+          Here are a few languages I have learnt:
+        </p>
+        <div className='z-10 p-2'>
+          <div className='z-10 grid w-full xl:grid-cols-3 md:grid-cols-2 grid-cols-1 place-content-center'>
+            {Proficiency.map((object: ProficiencyObject) => (
+              <div className='z-10 flex justify-center md:justify-evenly items-center m-2'>
+                <Image className="mr-3" src={object.Language} width={30} height={30} alt=""/>
+                <Stars value={object.Proficiency}/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+              </div>
+              ))}
           </div>
         </div>
+        <div className="xl:justify-start">
+          <Click content="About Me"/>
+        </div>
+      </div>
+      <div className="absolute w-full bottom-0">
+        <div className='triangular-self'></div>
       </div>
     </div>
   )

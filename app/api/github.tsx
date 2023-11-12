@@ -17,10 +17,11 @@ async function projects (URL: string) {
         }
       )
     )
+    
     return table
   }
   catch(err){
-    return err
+    console.log(err)
   }
 }
 
