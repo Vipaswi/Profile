@@ -1,4 +1,3 @@
-'use client'
 import React, {useState} from 'react'
 import Vipaswi from 'public/assets/Vipaswi.jpg'
 import Image, { StaticImageData } from 'next/image'
