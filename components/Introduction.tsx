@@ -16,10 +16,10 @@ const Introduction = () => {
   return (
     <div className="z-10 min-h-screen relative flex flex-col xl:flex-row md:justify-evenly justify-center items-center w-full rounded-md bg-[url('https://media.istockphoto.com/id/511661914/photo/white-marble-patterned-texture-background.jpg?s=612x612&w=0&k=20&c=o9RRB_jhshUtxn-LIO2TNQz4QycdeOh-qe1qMK4CZW4=')]">
       <div className="absolute opacity-80 inset-0 z-0">
-        <Image src='https://www.toppal.com/media/images/products/cache/e201_l-2000x2000.jpg' layout='fill' objectFit='cover' alt="background"/> 
+        <Image src='https://www.toppal.com/media/images/products/cache/e201_l-2000x2000.jpg' fill style={{objectFit:"cover"}} alt="background"/> 
       </div>
       <div className='z-10 s:m-5 xl:m-10 p-10'>
-        <Image src={Vipaswi} width={850} height={850} alt="Vipaswi" className='rounded-xl'/>
+        <Image src={Vipaswi} width={850} height={850} alt="Vipaswi" className='rounded-xl priority'/>
       </div>
       <div className="z-10 pb-5 pr-5 pl-5 mb-10 items-center">
         <h2 className='duration-500 text-6xl lg:text-8xl bold bg-gradient-to-r from-blue-500 via-purple-500 to-red-800 bg-clip-text text-transparent bold font-serif text-center xl:text-start items-center lg:mb-10' >Welcome!</h2>
@@ -35,7 +35,7 @@ const Introduction = () => {
           <div className='z-10 grid w-full xl:grid-cols-3 md:grid-cols-2 grid-cols-1 place-content-center'>
             {Proficiency.map((object: ProficiencyObject) => (
               <div className='z-10 flex justify-center md:justify-evenly items-center m-2'>
-                <Image className="mr-3" src={object.Language} width={30} height={30} alt=""/>
+                <Image className="mr-3 w-auto h-auto" src={object.Language} width={30} height={30} alt=""/>
                 <Stars value={object.Proficiency}/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
               </div>
               ))}
