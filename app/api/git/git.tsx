@@ -3,7 +3,7 @@ import {Octokit} from "octokit"
 export const fetchProjects = async() => {
   try {
     const octokit = new Octokit({
-      auth: process.env.GITHUBUSERNAME
+      auth: process.env.NEXT_PUBLIC_GITHUBUSERNAME
     })
     console.log(process.env)
     const projects = await octokit.request("GET /user/repos", {
