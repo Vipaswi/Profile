@@ -1,39 +1,34 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Project } from "./sub_components/Project";
-import { Octokit } from "octokit";
+import { fetchProjects } from "@/app/api/git/git";
 
 export const Projects = () => {
-    const [data, setData] = useState<any>([]);
-    const octokit = new Octokit({
-        auth: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
-    });
+    const [datas, setDatas] = useState<any>([]);
   
     useEffect(() => {
-        const fetchProjects = async () => {
-            const projects = await octokit.request("GET /user/repos", {
-                headers: {
-                    "X-GitHub-Api-Version": "2022-11-28",
-                },
-                visibility: 'public'
-            });
-            setData(projects.data);
+        const fetchData = async () => {
+            const projects = await fetchProjects()
+            setDatas(projects);
         };
-        fetchProjects();
+        fetchData();
     }, []);
 
     return (
-      <div className="max-h-min" id="Projects">
-        <div className="grid grid-flow-row-dense m-10">
-          <h1 className="text-xl md:text-3xl xl:text-5xl mb-5 underline">Projects</h1>
-              {data.map((element: any) => {
+      <div className="max-h-min border-b-2 border-black" id="Projects">
+        <div className="m-10">
+          <h1 className="text-xl md:text-3xl xl:text-5xl mb-10 underline ">Projects</h1>
+              {datas.map((element: any) => {
                 return (
-                  <div className="m-3" key={element["id"]}>
+                  <div className="m-3 z-1 mb-5" key={element["id"]}>
                       <Project
                           title={element["name"]}
                           description={element["description"]}
                           tags={element["topics"]}
+                          link={element["html_url"]}
                           key={element["id"]}
+                          dates={element["created_at"].split("T")[0] + " - " + element["pushed_at"].split("T")[0]}
+                          type={"Personal Project"}
                           />
                       </div>
                   );

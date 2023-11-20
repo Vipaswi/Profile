@@ -42,7 +42,7 @@ const Introduction = () => {
           </div>
         </div>
         <div className="xl:justify-start">
-          <Click content="About Me"/>
+          <Click content="About Me" link="#About_Me"/>
         </div>
       </div>
       <div className="absolute w-full bottom-0">
