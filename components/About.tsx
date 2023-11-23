@@ -5,7 +5,7 @@ import { AboutMe } from "./sub_components/AboutMe"
 
 const About = () => {
   return (
-    <div id="About_Me"className="z-10 relative flex flex-col xl:flex-row md:justify-evenly items-center w-full rounded-md bg-[url('https://media.istockphoto.com/id/511661914/photo/white-marble-patterned-texture-background.jpg?s=612x612&w=0&k=20&c=o9RRB_jhshUtxn-LIO2TNQz4QycdeOh-qe1qMK4CZW4=')]">
+    <div id="About_Me"className="z-10 relative flex flex-col 2xl:flex-row md:justify-evenly items-center w-full rounded-md bg-[url('https://media.istockphoto.com/id/511661914/photo/white-marble-patterned-texture-background.jpg?s=612x612&w=0&k=20&c=o9RRB_jhshUtxn-LIO2TNQz4QycdeOh-qe1qMK4CZW4=')]">
       <div className="absolute opacity-90 inset-0 z-0">
         <Image src='https://www.toppal.com/media/images/products/cache/e201_l-2000x2000.jpg' fill style={{objectFit:"cover"}} alt="background"/> 
       </div>
