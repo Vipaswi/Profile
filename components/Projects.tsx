@@ -15,7 +15,7 @@ export const Projects = () => {
     }, []);
 
     return (
-      <div className="flex justify-center item-center border-b-2 border-black" id="Projects">
+      <div className="min-h-screen flex justify-center item-center border-b-2 border-black" id="Projects">
         <div className="m-10">
           <h1 className="text-xl md:text-3xl xl:text-5xl mb-10 underline ">Projects</h1>
               {datas.map((element: any) => {
