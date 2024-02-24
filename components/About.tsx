@@ -10,7 +10,7 @@ const About = () => {
         <Image src='https://www.toppal.com/media/images/products/cache/e201_l-2000x2000.jpg' fill style={{objectFit:"cover"}} alt="background"/> 
       </div>
       <div className='z-10 s:m-5 xl:m-10 p-10'>
-        <Image src={Vipaswi2} width={850} height={850} alt="Vipaswi" className='rounded-xl priority'/>
+        <Image src={Vipaswi2} width={500} height={500} alt="Vipaswi" className='rounded-xl priority'/>
       </div>
       <div className="z-10 pb-5 pr-5 pl-5 mb-10">
         <h1 className="text-xl text-center md:text-3xl xl:text-5xl mb-10 underline mt-6">About Me</h1> 

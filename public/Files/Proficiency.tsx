@@ -5,11 +5,12 @@ import JavaScript from "@/public/assets/language_logo/JavaScript.png"
 import Arduino from "@/public/assets/language_logo/Arduino.png"
 import Tailwind from "@/public/assets/language_logo/Tailwind.png"
 import C from "@/public/assets/language_logo/C.png"
+import Java from "@/public/assets/language_logo/Java.png"
 
 const Proficiency = [
   {
     Language: Python,
-    Proficiency: 3,
+    Proficiency: 4,
   },
   {
     Language: JavaScript,
@@ -34,6 +35,10 @@ const Proficiency = [
   {
     Language: Arduino,
     Proficiency: 3.5,
+  },
+  {
+    Language: Java,
+    Proficiency: 3
   }
 ]
 

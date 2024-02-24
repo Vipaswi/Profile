@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import Link from 'next/link'
 
 interface Props {
@@ -8,12 +9,17 @@ interface Props {
   link: string,
   type: string, 
   dates?: string,
+  image?: string
 }
 
 export const Project = (props: Props) => {
   return (
     <Link href={props.link}> {/*/project/${props.title}/  for later*/}
-      <div className="flex flex-col p-2 w-full outline-none drop-shadow-sm border border-black rounded-md bg-white hover:bg-gray-200">
+    { props.image != undefined ?
+    <div className="flex flex-row space-x-4">
+      <Image src={props.image} width={100} height={100} alt="icon"/>
+    </div> : ""}
+      <div className="flex flex-col p-2 outline-none drop-shadow-sm border border-black rounded-md bg-white hover:bg-gray-200">
         <div className="flex justify-between">
           <h5 className='m-3 font-bold project-title text-xl'>{props.title}</h5>
           <p className="text-sm">{props.dates}</p>

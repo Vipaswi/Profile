@@ -11,7 +11,11 @@ export const fetchProjects = async() => {
           "X-GitHub-Api-Version": "2022-11-28",
       },
       visibility: 'public'
-  }); 
+    }); 
+
+
+    // create a dictionary of project
+ 
   return projects.data
   } catch (error) {
     console.log("Fetch error:", error)  
